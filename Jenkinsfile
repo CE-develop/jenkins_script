@@ -1,8 +1,8 @@
 pipeline {
     agent any
+    parallel{
+        stages {
 
-    stages {
-        parallel{
             stage('Example') {
                 steps {
                     echo "Running ${env.BUILD_ID} on ${env.JENKINS_URL}"
