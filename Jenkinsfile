@@ -11,6 +11,9 @@ pipeline {
 //            steps {
 //                echo 'Building..'
 //            }
+            when {
+                branch 'main'
+            }
             parallel {
                 stage('Parallel1') {
                     agent any
